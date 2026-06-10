@@ -28,8 +28,8 @@ public class PlayerController : CharacterBase
 
     private void Update()
     {
-        _mover?.Tick();
-        _graper?.Tick();
+        _mover.Tick();
+        _graper.Tick();
     }
 
     private void OnMove(InputValue value)

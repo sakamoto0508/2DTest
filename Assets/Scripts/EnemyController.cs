@@ -4,8 +4,8 @@ using static UnityEditor.Experimental.GraphView.GraphView;
 [RequireComponent(typeof(Rigidbody2D))]
 public class EnemyController : CharacterBase
 {
-    public EnemyConfig Config => _config;
     [SerializeField] private EnemyConfig _config;
+    public EnemyConfig Config => _config;
     private Transform _player;
     private Rigidbody2D _rb;
     public void Init()

@@ -31,6 +31,11 @@ public class PlayerGraper
 
     public void Grap()
     {
+        if (Camera.main == null)
+        {
+            Debug.LogError("Main Camera not found");
+            return;
+        }
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
         Vector2 direction = (mousePos - _transform.position).normalized;
         // マウス方向へレイを飛ばして接続可能な場所を探す
